@@ -20,7 +20,23 @@ public class MainMenu : MonoBehaviour
     public GameObject Nemo;
     public GameObject Title;
 
+    int Escena;
+    public static MainMenu instance;
+
     float timer;
+
+    void Awake ()
+    {
+        if(MainMenu.instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(Menu.gameObject);
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
 
     void Start()
     {
@@ -30,7 +46,7 @@ public class MainMenu : MonoBehaviour
 
     void Update()
     {
-
+        
     }
 
     IEnumerator LoadTitle()
@@ -59,7 +75,10 @@ public class MainMenu : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        StartCoroutine(Scene(SceneManager.GetActiveScene().buildIndex + 1));
+        Escena = Random.Range(1, 3);
+        Debug.Log(Escena);
+
+        StartCoroutine(Scene(SceneManager.GetActiveScene().buildIndex + Escena));
     }
 
     IEnumerator Scene(int LevelIndex)
@@ -88,7 +107,7 @@ public class MainMenu : MonoBehaviour
         Menu.SetActive(false);
         //LoadLevel();
         StartCoroutine(LoadFound());
-        
+
         //Found.SetActive(true);
     }
 

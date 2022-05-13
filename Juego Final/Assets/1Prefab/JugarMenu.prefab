@@ -85,11 +85,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df3490203b738b247a13142256398546, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Persons:
+  - {fileID: 172216, guid: b4587275bd8858843b068385a1cb3677, type: 3}
+  - {fileID: 130974, guid: cf0f33d2a32f159499351bdc8d15d958, type: 3}
+  - {fileID: 100498, guid: 646ab7dcc23229341892eccffdd5a3f3, type: 3}
+  - {fileID: 191984, guid: ae8b16115c4dca4499645ab171e10144, type: 3}
+  - {fileID: 137922, guid: 0d71eaacb7dc9214a840923aeede17a1, type: 3}
   personLost: {fileID: 1478715308122502, guid: 91b945b0668d8214598d65c9246536a4, type: 3}
   JugarMenu: {fileID: 0}
   Found: {fileID: 0}
   FoundTitle: {fileID: 0}
-  Person: {fileID: 0}
 --- !u!1 &1510063635292196969
 GameObject:
   m_ObjectHideFlags: 0
